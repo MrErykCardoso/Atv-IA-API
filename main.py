@@ -19,9 +19,13 @@ def start_chat():
         
         pdf = input("Gostaria de inserir essa resposta em um documento PDF (s ou n)?")
         if pdf.lower() in ["s", "sim"]:
-            format_to_pdf(res)
-            print("\nO texto foi formatado em um arquivo PDF.")
             print("-" * 60, "\n")
+            print("\n🍷📄 Informações do PDF: ")
+            title = input("\n\n💡 Insira o título do PDF: ")
+            arq_name = input("\n💡 Insira o nome do arquivo: ")
+            content = res
+            
+            format_to_pdf(title, content, arq_name)
             
     
 if __name__ == "__main__":
